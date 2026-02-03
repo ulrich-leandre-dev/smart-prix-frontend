@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Search, Filter, ShoppingCart, Star, Clock, Zap, Loader2 } from 'lucide-react';
+import { useCart } from '../hooks/useCart';
 
 export default function Home() {
   const [query, setQuery] = useState('');

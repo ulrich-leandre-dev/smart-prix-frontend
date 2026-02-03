@@ -11,6 +11,8 @@ export async function GET(request: Request) {
 
   try {
     const results = await scrapeProducts(query);
+    // On sauvegarde en cache Supabase pour les prochains
+    // saveResultsToCache(query, results); 
     return NextResponse.json({ results });
   } catch (error) {
     console.error('API Error:', error);

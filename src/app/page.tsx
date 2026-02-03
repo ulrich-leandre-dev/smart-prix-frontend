@@ -180,9 +180,15 @@ export default function Home() {
                     </div>
                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                       <div className="text-lg font-black text-slate-900">{item.price.toLocaleString()} XOF</div>
-                      <div className="text-[10px] font-bold text-slate-400 flex items-center gap-1">
-                        <Clock size={12} /> Direct
-                      </div>
+                      <button 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          addToCart(item);
+                        }}
+                        className="bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 transition-all flex items-center gap-2 text-xs font-bold"
+                      >
+                        <ShoppingCart size={14} /> Ajouter
+                      </button>
                     </div>
                   </a>
                 ))}

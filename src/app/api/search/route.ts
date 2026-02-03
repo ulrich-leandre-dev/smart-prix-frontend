@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { scrapeProducts } from '@/lib/scraper';
+import { scrapeProducts } from '../../../lib/scraper';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
